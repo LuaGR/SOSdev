@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "NextUI",
+    "description": "Offering a beautiful and adaptable system design.",
+    "image": "https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100",
+    "category": "System Design"
+  },
+  {
+    "id": 2,
+    "title": "FakeStoreAPI",
+    "description": "Offering a beautiful and adaptable system design.",
+    "image": "https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100",
+    "category": "API"
+  },
+  {
+    "id": 3,
+    "title": "HeroIcons",
+    "description": "Offering a beautiful and adaptable system design.",
+    "image": "https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100",
+    "category": "SVG"
+  },
+  {
+    "id": 4,
+    "title": "Shadcnui",
+    "description": "Offering a beautiful and adaptable system design.",
+    "image": "https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100",
+    "category": "System Design"
+  },
+  {
+    "id": 5,
+    "title": "Prisma",
+    "description": "Offering a beautiful and adaptable system design.",
+    "image": "https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100",
+    "category": "Database"
+  },
+  {
+    "id": 6,
+    "title": "ThreeJS",
+    "description": "Offering a beautiful and adaptable system design.",
+    "image": "https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100",
+    "category": "Animation"
+  }
+]
