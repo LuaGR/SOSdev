@@ -1,3 +1,4 @@
+'use client'
 import { useCategoryStore } from '@/store/useCategoryStore'
 import { Key, useEffect } from 'react'
 import { Item } from '@/types/item'
