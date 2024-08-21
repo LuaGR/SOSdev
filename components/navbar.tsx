@@ -24,15 +24,15 @@ import NextLink from 'next/link'
 import clsx from 'clsx'
 
 import { siteConfig } from '@/config/site'
-import { ThemeSwitch } from '@/components/theme-switch'
+import { ThemeSwitch } from '@/components/navbar/theme-switch'
 import {
   TwitterIcon,
   GithubIcon,
   DiscordIcon,
   HeartFilledIcon,
   Logo
-} from '@/components/icons'
-import SearchInput from '../app/ui/SearchInput'
+} from '@/components/navbar/icons'
+import SearchInput from './navbar/search-input'
 
 export const Navbar = () => {
   return (
@@ -159,8 +159,8 @@ export const Navbar = () => {
                   index === 2
                     ? 'primary'
                     : index === siteConfig.navMenuItems.length - 1
-                      ? 'danger'
-                      : 'foreground'
+                    ? 'danger'
+                    : 'foreground'
                 }
                 href='#'
                 size='lg'>

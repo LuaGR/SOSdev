@@ -1,6 +1,6 @@
 import { Key } from 'react'
 import { Item } from '@/types/item'
-import Resource from '../ui/items/Resources'
+import Resource from '@/components/items/resources'
 
 export default function Items({ items }: { items: Item[] }) {
   return (

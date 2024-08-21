@@ -1,6 +1,6 @@
 'use client'
 import { Kbd } from '@nextui-org/kbd'
-import { SearchIcon } from '../../components/icons'
+import { SearchIcon } from './icons'
 import { Input } from '@nextui-org/input'
 import { useSearchParams, usePathname, useRouter } from 'next/navigation'
 
