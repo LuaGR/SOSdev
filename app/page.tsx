@@ -4,6 +4,7 @@ import Items from './items/page'
 import PaginationClient from '@/components/items/pagination-client'
 import { Suspense } from 'react'
 import resources from '@/resources.json'
+import type { Item } from '@/types/item'
 
 export default async function Home({
   searchParams
@@ -19,7 +20,7 @@ export default async function Home({
   const category = searchParams?.category || 'all'
   const page = Number(searchParams?.page || '1')
 
-  const filteredResources = resources.filter((item) => {
+  const filteredResources = resources.filter((item: Item) => {
     const matchesCategory = category === 'all' || item.category === category
     const matchesQuery =
       item.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -41,11 +42,13 @@ export default async function Home({
       <Suspense fallback={<div>loading...</div>}>
         <Items items={paginatedResources} />
       </Suspense>
-      <PaginationClient
-        totalItems={totalItems}
-        itemsPerPage={itemsPerPage}
-        currentPage={page}
-      />
+      <Suspense>
+        <PaginationClient
+          totalItems={totalItems}
+          itemsPerPage={itemsPerPage}
+          currentPage={page}
+        />
+      </Suspense>
     </div>
   )
 }

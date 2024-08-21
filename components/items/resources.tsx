@@ -1,13 +1,14 @@
+'use client'
+
 import { Card, CardBody, CardFooter } from '@nextui-org/card'
 import { Image } from '@nextui-org/image'
-import { Key } from 'react'
 import { Item } from '@/types/item'
 
-export default function Resource({ item, index }: { item: Item; index: Key }) {
+export default function Resource({ item }: { item: Item }) {
   return (
     <Card
       shadow='sm'
-      key={index}
+      key={item.id}
       isPressable>
       <CardBody className='overflow-visible p-0'>
         <Image
