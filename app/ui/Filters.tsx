@@ -1,15 +1,21 @@
 'use client'
 
 import { Tab, Tabs } from '@nextui-org/tabs'
-import { useCategoryStore } from '@/store/useCategoryStore'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { Key } from 'react'
 
 export default function Filters() {
-  const category = useCategoryStore((state) => state.category)
-  const setCategory = useCategoryStore((state) => state.setCategory)
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const category = searchParams.get('category') || 'all'
 
-  const handleTabChange = (key) => {
-    setCategory(key)
+  const handleTabChange = (key: Key) => {
+    const params = new URLSearchParams(searchParams)
+    params.set('category', String(key))
+    params.set('page', '1')
+    router.replace(`?${params.toString()}`)
   }
+
   return (
     <div className='flex flex-wrap gap-4'>
       <Tabs
