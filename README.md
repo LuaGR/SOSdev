@@ -1,5 +1,6 @@
 Tasks:
 
+- Delete Zustand
 - Fetch
 - Carousel filters
 - Fix Skeleton and Suspense
