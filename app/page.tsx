@@ -1,6 +1,6 @@
 import Header from '@/components/header'
 import Filters from '../components/filters'
-import Items from './items/page'
+import Items from './items/items'
 import PaginationClient from '@/components/items/pagination-client'
 import { Suspense } from 'react'
 import resources from '@/resources.json'

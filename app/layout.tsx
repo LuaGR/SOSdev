@@ -9,6 +9,7 @@ import { siteConfig } from '@/config/site'
 import { fontSans } from '@/config/fonts'
 import { Navbar } from '@/components/navbar'
 import Footer from '@/components/footer'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: {
@@ -45,7 +46,9 @@ export default function RootLayout({
         )}>
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className='relative flex flex-col h-screen'>
-            <Navbar />
+            <Suspense>
+              <Navbar />
+            </Suspense>
             <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
               {children}
             </main>

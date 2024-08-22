@@ -1,6 +1,6 @@
 Tasks:
 
-- Delete Zustand
+- Debounce
 - Fetch
 - Carousel filters
 - Fix Skeleton and Suspense
