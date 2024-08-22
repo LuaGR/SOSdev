@@ -21,6 +21,7 @@
 		"@nextui-org/listbox": "2.1.23",
 		"@nextui-org/navbar": "2.0.34",
 		"@nextui-org/pagination": "^2.0.35",
+		"@nextui-org/skeleton": "^2.0.31",
 		"@nextui-org/snippet": "2.0.39",
 		"@nextui-org/switch": "2.0.32",
 		"@nextui-org/system": "2.2.1",
