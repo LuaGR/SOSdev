@@ -1,9 +1,10 @@
 import { sql } from '@vercel/postgres'
 import { NextResponse } from 'next/server'
+import type { Item } from '@/types/item'
 
 export async function GET(request: Request) {
   try {
-    // Crear la tabla con la estructura adecuada
+    // Crear la tabla con la estructura adecuada si no existe
     await sql`
       CREATE TABLE IF NOT EXISTS Resources (
         id SERIAL PRIMARY KEY,
@@ -33,9 +34,13 @@ export async function GET(request: Request) {
       ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation')
     `
 
-    const result = await sql`SELECT * FROM Resources;`
-    return NextResponse.json({ result }, { status: 200 })
+    // Obtener los datos y asegurarse de que `rows` esté tipado como `Item[]`
+    const { rows } = await sql<Item[]>`SELECT * FROM Resources;`
+
+    // Retornar los datos en formato JSON
+    return NextResponse.json({ items: rows }, { status: 200 })
   } catch (error) {
-    return NextResponse.json({ error }, { status: 500 })
+    console.error('Error:', error)
+    return NextResponse.json({ error: 'Error fetching data' }, { status: 500 })
   }
 }
