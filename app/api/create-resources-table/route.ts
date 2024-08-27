@@ -2,7 +2,7 @@ import { sql } from '@vercel/postgres'
 import { NextResponse } from 'next/server'
 import type { Item } from '@/types/item'
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     // Crear la tabla con la estructura adecuada si no existe
     await sql`

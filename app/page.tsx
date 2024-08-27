@@ -43,7 +43,6 @@ export default async function Home({
   })
 
   const totalItems = filteredResources.length
-  const totalPages = Math.ceil(totalItems / itemsPerPage)
   const paginatedResources = filteredResources.slice(
     (page - 1) * itemsPerPage,
     page * itemsPerPage
