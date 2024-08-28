@@ -3,8 +3,8 @@ import Filters from '../components/filters'
 import Items from './items/items'
 import PaginationClient from '@/components/items/pagination-client'
 import { Suspense } from 'react'
+import { sql } from '@vercel/postgres'
 import type { Item } from '@/types/item'
-import { fetchResources } from '@/lib/data'
 
 export default async function Home({
   searchParams
@@ -16,7 +16,7 @@ export default async function Home({
   }
 }) {
   // Fetch resources from the database
-  const rows = (await fetchResources()) || []
+  const { rows } = await sql`SELECT * from Resources`
 
   // Map the rows to the Item type
   const resources: Item[] = rows.map((row) => ({
