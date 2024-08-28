@@ -20,7 +20,7 @@ export async function GET() {
       INSERT INTO Resources (title, description, image, category)
       VALUES 
       ('NextUI', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'System Design'),
-      ('FakeStoreAPI', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'API'),
+      ('FakeStoreAPI', 'Rest API for your e-commerce or shopping website prototype', 'https://d4.alternativeto.net/2D8BJwydkMONJVaz_PkLJK9v43M9eiyjzTYOwULBZ6M/rs:fit:2400:2400:0/g:ce:0:0/YWJzOi8vZGlzdC9zL2Zha2Utc3RvcmUtYXBpXzQwODY3MF9mdWxsLnBuZw.jpg', 'API'),
       ('HeroIcons', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'SVG'),
       ('Shadcnui', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'System Design'),
       ('Prisma', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Database'),
