@@ -8,7 +8,6 @@ import {
   NavbarItem,
   NavbarMenuItem
 } from '@nextui-org/navbar'
-import { Button } from '@nextui-org/button'
 
 import { Link } from '@nextui-org/link'
 
@@ -29,7 +28,6 @@ import {
   TwitterIcon,
   GithubIcon,
   DiscordIcon,
-  HeartFilledIcon,
   Logo
 } from '@/components/navbar/icons'
 import SearchInput from './navbar/search-input'

@@ -7,7 +7,7 @@ export default function Footer() {
           <a
             href='https://flowbite.com/'
             className='hover:underline'>
-            tsuki™
+            SOSdev™
           </a>
           . All Rights Reserved.
         </span>
