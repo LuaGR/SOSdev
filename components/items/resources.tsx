@@ -5,10 +5,15 @@ import { Image } from '@nextui-org/image'
 import { Item } from '@/types/item'
 
 export default function Resource({ item }: { item: Item }) {
+  const handleCardClick = () => {
+    window.open(item.url, '_blank')
+  }
+
   return (
     <Card
       shadow='sm'
       key={item.id}
+      onClick={handleCardClick}
       isPressable>
       <CardBody className='overflow-visible p-0'>
         <Image

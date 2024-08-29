@@ -4,4 +4,5 @@ export interface Item {
   image: string
   category: string
   description: string
+  url: string
 }

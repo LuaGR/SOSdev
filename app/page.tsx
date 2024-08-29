@@ -24,11 +24,12 @@ export default async function Home({
     title: row.title,
     description: row.description,
     image: row.image,
-    category: row.category
+    category: row.category,
+    url: row.url
   }))
 
   // Pagination
-  const itemsPerPage = 12
+  const itemsPerPage = 8
   const query = searchParams?.query || ''
   const category = searchParams?.category || 'all'
   const page = Number(searchParams?.page || '1')
