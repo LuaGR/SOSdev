@@ -12,7 +12,6 @@ export async function GET() {
         description TEXT,
         image TEXT,
         category VARCHAR(255)
-        UNIQUE(title)
       );
     `
 
@@ -25,6 +24,13 @@ export async function GET() {
       ('HeroIcons', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'SVG'),
       ('Shadcnui', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'System Design'),
       ('Prisma', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Database'),
+      ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation'),
+      ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation'),
+      ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation'),
+      ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation'),
+      ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation'),
+      ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation'),
+      ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation'),
       ('ThreeJS', 'Offering a beautiful and adaptable system design.', 'https://nextui.org/_next/image?url=https%3A%2F%2Fnextui.org%2Fnextui-banner.png&w=750&q=100', 'Animation')
     `
 
