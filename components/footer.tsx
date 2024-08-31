@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className='rounded-lg shadow m-4 mt-20'>
@@ -5,7 +7,7 @@ export default function Footer() {
         <span className='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
           © 2024{' '}
           <a
-            href='https://flowbite.com/'
+            href='/'
             className='hover:underline'>
             SOSdev™
           </a>
@@ -13,32 +15,32 @@ export default function Footer() {
         </span>
         <ul className='flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
           <li>
-            <a
-              href='#'
+            <Link
+              href='/about'
               className='hover:underline me-4 md:me-6'>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href='#'
               className='hover:underline me-4 md:me-6'>
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href='#'
               className='hover:underline me-4 md:me-6'>
               Licensing
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href='#'
               className='hover:underline'>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
