@@ -23,21 +23,21 @@ export default function Footer() {
           </li>
           <li>
             <Link
-              href='#'
+              href='/privacy'
               className='hover:underline me-4 md:me-6'>
               Privacy Policy
             </Link>
           </li>
           <li>
             <Link
-              href='#'
+              href='/licensing'
               className='hover:underline me-4 md:me-6'>
               Licensing
             </Link>
           </li>
           <li>
             <Link
-              href='#'
+              href='/contact'
               className='hover:underline'>
               Contact
             </Link>
