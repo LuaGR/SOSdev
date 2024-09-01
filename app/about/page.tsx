@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <div className='min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-6'>
+    <div className='min-h-screen  text-gray-900 dark:text-gray-100 p-6'>
       <div className='max-w-4xl mx-auto'>
         <h1 className='text-4xl font-bold mb-12 text-center'>About SOSdev</h1>
         <p className='text-lg mb-4'>
