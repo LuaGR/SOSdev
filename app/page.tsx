@@ -54,7 +54,13 @@ export default async function Home({
       <Header />
       <Filters />
       <Suspense fallback={<div>loading...</div>}>
-        <Items items={paginatedResources} />
+        {totalItems ? (
+          <Items items={paginatedResources} />
+        ) : (
+          <p className='text-md text-default-600 dark:text-default-400'>
+            The search found no matches.
+          </p>
+        )}
       </Suspense>
       <Suspense>
         <PaginationClient
