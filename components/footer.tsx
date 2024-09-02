@@ -28,13 +28,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
           </li>
-          <li>
-            <Link
-              href='/licensing'
-              className='hover:underline me-4 md:me-6'>
-              Licensing
-            </Link>
-          </li>
+
           <li>
             <Link
               href='/contact'

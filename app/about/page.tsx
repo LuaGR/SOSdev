@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
     <div className='flex flex-col gap-12 items-start px-4 max-w-3xl mx-auto'>
-      <section className='flex flex-col text-left'>
+      <section className='flex flex-col text-left gap-3'>
         <h1 className='text-3xl font-bold mb-4'>About</h1>
         <p className='text-lg text-default-600 dark:text-default-400 mt-4'>
           Welcome to SOSdev, your go-to resource hub for developers of all

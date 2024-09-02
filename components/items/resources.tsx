@@ -14,7 +14,8 @@ export default function Resource({ item }: { item: Item }) {
       shadow='sm'
       key={item.id}
       onClick={handleCardClick}
-      isPressable>
+      isPressable
+      className='max-w-80'>
       <CardBody className='overflow-visible p-0'>
         <Image
           shadow='sm'
