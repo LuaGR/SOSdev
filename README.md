@@ -2,8 +2,7 @@ Tasks:
 
 - Debounce
 - Carousel filters
-- Fix Skeleton and Suspense
-- Fix cards resources
+- Add Skeleton
 - i18n
 - Contact: Send email
 
