@@ -53,7 +53,9 @@ export default async function Home({
     <div className='flex flex-col gap-12 items-center'>
       <Header />
       <Filters />
-      <Suspense fallback={<div>loading...</div>}>
+      <Suspense
+        key={query + page}
+        fallback={<div>loading...</div>}>
         {totalItems ? (
           <Items items={paginatedResources} />
         ) : (
