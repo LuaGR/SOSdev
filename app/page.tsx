@@ -16,7 +16,7 @@ export default async function Home({
   }
 }) {
   // Fetch resources from the database
-  const { rows } = await sql`SELECT * from Resources`
+  const { rows } = await sql`SELECT * from resources`
 
   // Map the rows to the Item type
   const resources: Item[] = rows.map((row) => ({
