@@ -1,10 +1,9 @@
 Tasks:
 
 - Carousel filters
-- Add Skeleton
-- i18n
+- Fix size Skeleton
 - Contact: Send email
-- Fix database update
+- i18n
 
   BACKEND:
 
