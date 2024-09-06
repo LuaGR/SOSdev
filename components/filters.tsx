@@ -17,12 +17,13 @@ export default function Filters() {
   }
 
   return (
-    <div className='flex flex-wrap gap-4'>
+    <div className='flex justify-center'>
       <Tabs
         variant='bordered'
         aria-label='Tabs variants'
         onSelectionChange={handleTabChange}
-        selectedKey={category}>
+        selectedKey={category}
+        className='w-96 sm:w-5/6 md:w-full'>
         <Tab
           key='all'
           title='All'
