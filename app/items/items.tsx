@@ -2,7 +2,7 @@ import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
 
-import { sql } from '@vercel/postgres'
+import { fetchResources } from '@/lib/data'
 
 export default async function Items({
   searchParams
@@ -14,10 +14,10 @@ export default async function Items({
   }
 }) {
   // Fetch resources from the database
-  const { rows } = await sql`SELECT * from resources`
+  const rows = await fetchResources()
 
   // Map the rows to the Item type
-  const resources: Item[] = rows.map((row) => ({
+  const resources: Item[] = (rows ?? []).map((row) => ({
     id: row.id,
     title: row.title,
     description: row.description,
@@ -50,7 +50,7 @@ export default async function Items({
   return (
     <>
       <div className='gap-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4'>
-        {paginatedResources.map((item) => (
+        {paginatedResources?.map((item) => (
           <Resource
             item={item}
             key={item.id}
