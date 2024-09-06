@@ -1,7 +1,6 @@
 import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
-
 import { fetchResources } from '@/lib/data'
 
 export default async function Items({
@@ -41,7 +40,6 @@ export default async function Items({
     return matchesCategory && matchesQuery
   })
 
-  const totalItems = filteredResources.length
   const paginatedResources = filteredResources.slice(
     (page - 1) * itemsPerPage,
     page * itemsPerPage
@@ -57,12 +55,6 @@ export default async function Items({
           />
         ))}
       </div>
-
-      <PaginationClient
-        totalItems={totalItems}
-        itemsPerPage={itemsPerPage}
-        currentPage={page}
-      />
     </>
   )
 }
