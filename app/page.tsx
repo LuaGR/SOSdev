@@ -1,5 +1,5 @@
 import Header from '@/components/header'
-import Items from './items/page'
+import Items from './items/items'
 import { Suspense } from 'react'
 import SkeletonItems from '@/components/items/skeleton-items'
 import Filters from '@/components/filters'
