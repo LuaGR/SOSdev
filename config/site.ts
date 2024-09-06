@@ -60,7 +60,7 @@ export const siteConfig = {
     }
   ],
   links: {
-    github: 'https://github.com/LuaGR',
+    github: 'https://github.com/LuaGR/SOSdev',
     twitter: 'https://twitter.com/getnextui',
     docs: 'https://nextui.org',
     discord: 'https://discord.gg/9b6yyZKmH4',
