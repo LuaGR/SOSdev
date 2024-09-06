@@ -1,8 +1,8 @@
 import Header from '@/components/header'
-import Filters from '../components/filters'
 import Items from './items/items'
 import { Suspense } from 'react'
 import SkeletonItems from '@/components/items/skeleton-items'
+import { InfiniteSliderHoverSpeed } from '@/components/filters/infinite-slider'
 
 export default async function Home({
   searchParams
@@ -20,7 +20,7 @@ export default async function Home({
   return (
     <div className='flex flex-col gap-12 items-center'>
       <Header />
-      <Filters />
+      <InfiniteSliderHoverSpeed />
       <Suspense
         key={query + page + category}
         fallback={<SkeletonItems />}>
