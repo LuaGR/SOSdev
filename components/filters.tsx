@@ -29,10 +29,6 @@ export default function Filters() {
           title='All'
         />
         <Tab
-          key='AI'
-          title='AI'
-        />
-        <Tab
           key='SVG'
           title='SVG'
         />
@@ -41,8 +37,8 @@ export default function Filters() {
           title='Authentication'
         />
         <Tab
-          key='System Design'
-          title='System Design'
+          key='Design System'
+          title='Design System'
         />
         <Tab
           key='API'
@@ -59,6 +55,10 @@ export default function Filters() {
         <Tab
           key='Youtube'
           title='Youtube'
+        />
+        <Tab
+          key='AI'
+          title='AI'
         />
       </Tabs>
     </div>
