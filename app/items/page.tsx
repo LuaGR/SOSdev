@@ -1,7 +1,6 @@
 import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
-import { fetchResources } from '@/lib/data'
 
 export default async function Items({
   searchParams
@@ -12,11 +11,27 @@ export default async function Items({
     category?: string
   }
 }) {
-  // Fetch resources from the database
-  const rows = await fetchResources()
+  // Hacer una solicitud a la API para obtener los recursos
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/create-resources-table`,
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+  )
+
+  // Verificar si la respuesta fue exitosa
+  if (!response.ok) {
+    throw new Error('Failed to fetch resources')
+  }
+
+  // Parsear los datos de la API
+  const { items: rows } = await response.json()
 
   // Map the rows to the Item type
-  const resources: Item[] = (rows ?? []).map((row) => ({
+  const resources: Item[] = (rows ?? []).map((row: Item) => ({
     id: row.id,
     title: row.title,
     description: row.description,
