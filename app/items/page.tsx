@@ -13,7 +13,7 @@ export default async function Items({
 }) {
   // Hacer una solicitud a la API para obtener los recursos
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/create-resources-table`,
+    `https://sosdev.vercel.app/api/create-resources-table`,
     {
       method: 'GET',
       headers: {
