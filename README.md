@@ -1,6 +1,7 @@
 Tasks:
 
-- Fix accesibilty filters slider
+- Add more resources
+- Fix accesibilty filters with slider
 
 Extra:
 
