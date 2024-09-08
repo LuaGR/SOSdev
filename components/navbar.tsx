@@ -2,22 +2,11 @@
 import {
   Navbar as NextUINavbar,
   NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-  NavbarMenuItem
+  NavbarBrand
 } from '@nextui-org/navbar'
 
 import { Link } from '@nextui-org/link'
 
-import {
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu
-} from '@nextui-org/dropdown'
-import { Avatar } from '@nextui-org/avatar'
 import NextLink from 'next/link'
 
 import { siteConfig } from '@/config/site'
@@ -46,63 +35,11 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className='hidden sm:flex basis-1/5 sm:basis-full'
+        className=' basis-1 pl-4'
         justify='end'>
-        <NavbarItem className='hidden sm:flex gap-2'>
-          <Link
-            isExternal
-            aria-label='Github'
-            href={siteConfig.links.github}>
-            <GithubIcon className='text-default-500' />
-          </Link>
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className='hidden lg:flex'>
+        <div>
           <SearchInput />
-        </NavbarItem>
-        <NavbarItem className='hidden md:flex'>
-          <Dropdown placement='bottom-end'>
-            <DropdownTrigger>
-              <Avatar
-                isBordered
-                as='button'
-                className='transition-transform'
-                color='secondary'
-                name='Jason Hughes'
-                size='sm'
-                src='https://i.pravatar.cc/150?u=a042581f4e29026704d'
-              />
-            </DropdownTrigger>
-            <DropdownMenu
-              aria-label='Profile Actions'
-              variant='flat'>
-              <DropdownItem
-                key='profile'
-                className='h-14 gap-2'>
-                <p className='font-semibold'>Signed in as</p>
-                <p className='font-semibold'>zoey@example.com</p>
-              </DropdownItem>
-              <DropdownItem key='settings'>My Settings</DropdownItem>
-              <DropdownItem key='team_settings'>Team Settings</DropdownItem>
-              <DropdownItem key='analytics'>Analytics</DropdownItem>
-              <DropdownItem key='system'>System</DropdownItem>
-              <DropdownItem key='configurations'>Configurations</DropdownItem>
-              <DropdownItem key='help_and_feedback'>
-                Help & Feedback
-              </DropdownItem>
-              <DropdownItem
-                key='logout'
-                color='danger'>
-                Log Out
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent
-        className='sm:hidden basis-1 pl-4'
-        justify='end'>
+        </div>
         <Link
           isExternal
           aria-label='Github'
@@ -110,30 +47,7 @@ export const Navbar = () => {
           <GithubIcon className='text-default-500' />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
       </NavbarContent>
-
-      <NavbarMenu>
-        <SearchInput />
-        <div className='mx-4 mt-2 flex flex-col gap-2'>
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? 'primary'
-                    : index === siteConfig.navMenuItems.length - 1
-                    ? 'danger'
-                    : 'foreground'
-                }
-                href='#'
-                size='lg'>
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
-      </NavbarMenu>
     </NextUINavbar>
   )
 }
