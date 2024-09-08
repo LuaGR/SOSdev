@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div className='flex flex-col gap-12 items-start px-4 max-w-3xl mx-auto'>
       <h1 className='text-3xl font-bold'>Contact</h1>
-      <section className='flex flex-col text-left gap-3 w-2/3 sm:w-3/3 '>
+      <section className='flex flex-col text-left gap-3 w-full max-w-lg'>
         <form className='flex flex-col gap-8'>
           <div>
             <label
