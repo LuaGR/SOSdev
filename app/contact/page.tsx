@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div className='flex flex-col gap-12 items-start px-4 max-w-3xl mx-auto'>
       <h1 className='text-3xl font-bold'>Contact</h1>
-      <section className='flex flex-col text-left gap-3 w-96'>
+      <section className='flex flex-col text-left gap-3 w-2/3 sm:w-3/3 '>
         <form className='flex flex-col gap-8'>
           <div>
             <label
@@ -16,6 +16,7 @@ export default function Contact() {
               id='name'
               className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
               placeholder='Your name'
+              required
             />
           </div>
 
@@ -41,7 +42,8 @@ export default function Contact() {
                 type='text'
                 id='email-address-icon'
                 className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                placeholder='name@gmail.com'
+                placeholder='name@example.com'
+                required
               />
             </div>
           </div>
@@ -56,7 +58,8 @@ export default function Contact() {
               id='message'
               rows={4}
               className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-              placeholder='Leave a comment...'></textarea>
+              placeholder='Leave a comment...'
+              required></textarea>
           </div>
 
           <div>
