@@ -1,5 +1,4 @@
 'use client'
-import { Kbd } from '@nextui-org/kbd'
 import { SearchIcon } from './icons'
 import { Input } from '@nextui-org/input'
 import { useSearchParams, usePathname, useRouter } from 'next/navigation'
@@ -35,13 +34,6 @@ export default function SearchInput() {
         inputWrapper: 'bg-default-100',
         input: 'text-sm'
       }}
-      endContent={
-        <Kbd
-          className='hidden lg:inline-block'
-          keys={['command']}>
-          K
-        </Kbd>
-      }
       labelPlacement='outside'
       placeholder='Search...'
       startContent={
