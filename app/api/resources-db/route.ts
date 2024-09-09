@@ -2,7 +2,7 @@ import { sql } from '@vercel/postgres'
 import { NextResponse } from 'next/server'
 import type { Item } from '@/types/item'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 1
 
 // GET: Obtener todos los registros de la tabla resources
 export async function GET() {
