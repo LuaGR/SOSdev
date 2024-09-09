@@ -1,7 +1,6 @@
 import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
-import { sql } from '@vercel/postgres'
 
 export const revalidate = 0 // No cachear los resultados
 
@@ -14,17 +13,16 @@ export default async function Items({
     category?: string
   }
 }) {
-  const { rows } = await sql`SELECT * FROM resources`
+  const res = await fetch(`https://sosdev.vercel.app/api/resources-table`, {
+    cache: 'no-store' // Evitar el cache si es necesario
+  })
 
-  // Map the rows to the Item type
-  const resources: Item[] = (rows ?? []).map((row) => ({
-    id: row.id,
-    title: row.title,
-    description: row.description,
-    image: row.image,
-    category: row.category,
-    url: row.url
-  }))
+  if (!res.ok) {
+    throw new Error('Failed to fetch data from API')
+  }
+
+  const data = await res.json()
+  const resources: Item[] = data.items || []
 
   // Pagination
   const itemsPerPage = 8
