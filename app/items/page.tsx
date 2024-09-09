@@ -2,7 +2,7 @@ import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 1
 
 export default async function Items({
   searchParams
