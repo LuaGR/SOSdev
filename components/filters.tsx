@@ -23,7 +23,7 @@ export default function Filters() {
         aria-label='Tabs variants'
         onSelectionChange={handleTabChange}
         selectedKey={category}
-        className='w-96 sm:w-5/6 md:w-full'>
+        className='w-96 sm:w-4/6 md:w-5/6'>
         <Tab
           key='all'
           title='All'
@@ -36,29 +36,34 @@ export default function Filters() {
           key='Authentication'
           title='Authentication'
         />
+
         <Tab
-          key='Design System'
-          title='Design System'
-        />
-        <Tab
-          key='API'
-          title='API'
-        />
-        <Tab
-          key='Database'
-          title='Database'
-        />
-        <Tab
-          key='Animation'
-          title='Animation'
+          key='Learn'
+          title='Learn'
         />
         <Tab
           key='Youtube'
           title='Youtube'
         />
         <Tab
+          key='Animation'
+          title='Animation'
+        />
+        <Tab
+          key='API'
+          title='API'
+        />
+        <Tab
+          key='Design System'
+          title='Design System'
+        />
+        <Tab
           key='AI'
           title='AI'
+        />
+        <Tab
+          key='Database'
+          title='Database'
         />
       </Tabs>
     </div>

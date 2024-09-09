@@ -1,6 +1,6 @@
 Tasks:
 
-- Add API route.ts
+- Add modal in search (mobile)
 - Fix accesibilty filters with slider
 
 Extra:
