@@ -1,7 +1,6 @@
 import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
-import { fetchResources } from '@/lib/data'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,17 +13,20 @@ export default async function Items({
     category?: string
   }
 }) {
-  const rows = await fetchResources()
+  // const rows = await fetchResources()
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/resources-db`,
+    {
+      cache: 'no-store' // Para asegurar que obtengas siempre datos actualizados
+    }
+  )
 
-  // Map the rows to the Item type
-  const resources: Item[] = (rows ?? []).map((row) => ({
-    id: row.id,
-    title: row.title,
-    description: row.description,
-    image: row.image,
-    category: row.category,
-    url: row.url
-  }))
+  if (!res.ok) {
+    throw new Error('Failed to fetch resources')
+  }
+
+  const data = await res.json()
+  const resources: Item[] = data.items
 
   // Pagination
   const itemsPerPage = 8
