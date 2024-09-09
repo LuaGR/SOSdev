@@ -2,8 +2,6 @@ import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
 
-export const revalidate = 0 // No cachear los resultados
-
 export default async function Items({
   searchParams
 }: {

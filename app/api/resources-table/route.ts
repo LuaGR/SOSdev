@@ -2,6 +2,8 @@ import { sql } from '@vercel/postgres'
 import { NextResponse } from 'next/server'
 import type { Item } from '@/types/item'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   try {
     const { rows } = await sql<Item[]>`SELECT * FROM resources`
