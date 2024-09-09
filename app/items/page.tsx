@@ -3,6 +3,8 @@ import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
 import { sql } from '@vercel/postgres'
 
+export const revalidate = 0 // No cachear los resultados
+
 export default async function Items({
   searchParams
 }: {
