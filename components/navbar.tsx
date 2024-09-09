@@ -5,13 +5,10 @@ import {
   NavbarBrand
 } from '@nextui-org/navbar'
 
-import { Link } from '@nextui-org/link'
-
 import NextLink from 'next/link'
 
-import { siteConfig } from '@/config/site'
 import { ThemeSwitch } from '@/components/navbar/theme-switch'
-import { GithubIcon, Logo } from '@/components/navbar/icons'
+import { Logo } from '@/components/navbar/icons'
 import SearchInput from './navbar/search-input'
 
 export const Navbar = () => {
@@ -40,12 +37,12 @@ export const Navbar = () => {
         <div className='w-2/3 sm:w-1/3'>
           <SearchInput />
         </div>
-        <Link
+        {/* <Link
           isExternal
           aria-label='Github'
           href={siteConfig.links.github}>
           <GithubIcon className='text-default-500' />
-        </Link>
+        </Link> */}
         <ThemeSwitch />
       </NavbarContent>
     </NextUINavbar>
