@@ -1,6 +1,6 @@
 Tasks:
 
-- Add more resources
+- Add API route.ts
 - Fix accesibilty filters with slider
 
 Extra:
