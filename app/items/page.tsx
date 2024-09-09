@@ -1,6 +1,7 @@
 import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
+import { sql } from '@vercel/postgres'
 
 export default async function Items({
   searchParams
@@ -11,27 +12,10 @@ export default async function Items({
     category?: string
   }
 }) {
-  // Hacer una solicitud a la API para obtener los recursos
-  const response = await fetch(
-    `https://sosdev.vercel.app/api/create-resources-table`,
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
-  )
-
-  // Verificar si la respuesta fue exitosa
-  if (!response.ok) {
-    throw new Error('Failed to fetch resources')
-  }
-
-  // Parsear los datos de la API
-  const { items: rows } = await response.json()
+  const { rows } = await sql`SELECT * FROM resources`
 
   // Map the rows to the Item type
-  const resources: Item[] = (rows ?? []).map((row: Item) => ({
+  const resources: Item[] = (rows ?? []).map((row) => ({
     id: row.id,
     title: row.title,
     description: row.description,
