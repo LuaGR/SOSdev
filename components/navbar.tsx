@@ -37,7 +37,7 @@ export const Navbar = () => {
       <NavbarContent
         className=' basis-1 pl-4'
         justify='end'>
-        <div>
+        <div className='w-2/3 sm:w-1/3'>
           <SearchInput />
         </div>
         <Link

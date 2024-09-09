@@ -1,7 +1,7 @@
 import type { Item } from '@/types/item'
 import Resource from '@/components/items/resources'
 import PaginationClient from '@/components/items/pagination-client'
-import { sql } from '@vercel/postgres'
+import { fetchResources } from '@/lib/data'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,7 +14,7 @@ export default async function Items({
     category?: string
   }
 }) {
-  const { rows } = await sql`SELECT * FROM resources`
+  const rows = await fetchResources()
 
   // Map the rows to the Item type
   const resources: Item[] = (rows ?? []).map((row) => ({
