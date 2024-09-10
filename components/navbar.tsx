@@ -34,15 +34,10 @@ export const Navbar = () => {
       <NavbarContent
         className=' basis-1 pl-4'
         justify='end'>
-        <div className='w-2/3 sm:w-1/3'>
+        <div className='w-4/5 sm:w-3/5'>
           <SearchInput />
         </div>
-        {/* <Link
-          isExternal
-          aria-label='Github'
-          href={siteConfig.links.github}>
-          <GithubIcon className='text-default-500' />
-        </Link> */}
+
         <ThemeSwitch />
       </NavbarContent>
     </NextUINavbar>

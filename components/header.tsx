@@ -10,9 +10,9 @@ export default function Header() {
     <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
       <div className='inline-block max-w-lg text-center justify-center'>
         <h1 className={title()}>Your&nbsp;</h1>
-        <h1 className={title({ color: 'green' })}>Resources&nbsp;</h1>
+        <h1 className={title({ color: 'green' })}>Dev Resources&nbsp;</h1>
         <br />
-        <h1 className={title()}>for devs to save you life.</h1>
+        <h1 className={title()}>to save your life.</h1>
         <h2 className={subtitle({ class: 'mt-4' })}>
           Beautiful, fast and modern resources of code.
         </h2>
