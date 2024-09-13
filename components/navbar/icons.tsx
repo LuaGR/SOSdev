@@ -3,23 +3,25 @@ import * as React from 'react'
 import { IconSvgProps } from '@/types'
 
 export const Logo: React.FC<IconSvgProps> = ({
-  size = 36,
+  size = 28,
   width,
   height,
   ...props
 }) => (
   <svg
-    fill='none'
-    height={size || height}
-    viewBox='0 0 32 32'
+    xmlns='http://www.w3.org/2000/svg'
     width={size || width}
-    {...props}>
+    height={size || height}
+    viewBox='0 0 24 24'
+    fill='currentColor'
+    {...props}
+    className='icon icon-tabler icons-tabler-filled icon-tabler-code-circle'>
     <path
-      clipRule='evenodd'
-      d='M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z'
-      fill='currentColor'
-      fillRule='evenodd'
+      stroke='none'
+      d='M0 0h24v24H0z'
+      fill='none'
     />
+    <path d='M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-6.293 5.953a1 1 0 0 0 -1.414 0l-2 2a1 1 0 0 0 0 1.414l2 2a1 1 0 0 0 1.414 0l.083 -.094a1 1 0 0 0 -.083 -1.32l-1.292 -1.293l1.292 -1.293a1 1 0 0 0 0 -1.414m4 0a1 1 0 0 0 -1.414 0l-.083 .094a1 1 0 0 0 .083 1.32l1.292 1.293l-1.292 1.293a1 1 0 0 0 1.414 1.414l2 -2a1 1 0 0 0 0 -1.414z' />
   </svg>
 )
 
