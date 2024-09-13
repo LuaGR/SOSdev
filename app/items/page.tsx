@@ -51,20 +51,26 @@ export default async function Items({
 
   return (
     <>
-      <div className='gap-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4'>
-        {paginatedResources?.map((item) => (
-          <Resource
-            item={item}
-            key={item.id}
-          />
-        ))}
-      </div>
+      {totalItems > 0 ? (
+        <div className='gap-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4'>
+          {paginatedResources.map((item) => (
+            <Resource
+              item={item}
+              key={item.id}
+            />
+          ))}
+        </div>
+      ) : (
+        <p className='text-center mt-4'>No results found.</p>
+      )}
 
-      <PaginationClient
-        totalItems={totalItems}
-        itemsPerPage={itemsPerPage}
-        currentPage={page}
-      />
+      {totalItems > 0 && (
+        <PaginationClient
+          totalItems={totalItems}
+          itemsPerPage={itemsPerPage}
+          currentPage={page}
+        />
+      )}
     </>
   )
 }
