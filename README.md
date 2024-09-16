@@ -10,6 +10,7 @@
 - **Paginación Dinámica**: Navega cómodamente a través de los recursos con un sistema de paginación optimizado.
 - **Modo Oscuro y Claro**: Elige entre el modo oscuro o claro según tu preferencia.
 - **Responsive Design**: Totalmente optimizado para dispositivos móviles y de escritorio.
+- **Testing E2E con Playwright**: Para garantizar la calidad y el correcto funcionamiento de la aplicación, utilizamos Playwright para realizar pruebas end-to-end (E2E).
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -17,6 +18,7 @@
 - **TypeScript**: Superconjunto de JavaScript con tipado estático.
 - **Tailwind CSS**: Framework CSS para crear diseños rápidos y responsivos.
 - **@vercel/postgres**: Base de datos Postgres gestionada por Vercel.
+- **Playwright**: Para garantizar la calidad y el correcto funcionamiento de la aplicación, utilicé Playwright para realizar pruebas end-to-end (E2E).
 - **Vercel**: Hosting y despliegue continuo de la aplicación.
 
 ## 📧 Contacto
