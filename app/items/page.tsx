@@ -36,7 +36,8 @@ export default async function Items({
 
   // Filters
   const filteredResources = resources.filter((item: Item) => {
-    const matchesCategory = category === 'all' || item.category === category
+    const matchesCategory =
+      category === 'all' || item.category.toLowerCase() === category
     const matchesQuery =
       item.title.toLowerCase().includes(query.toLowerCase()) ||
       item.description?.toLowerCase().includes(query.toLowerCase())

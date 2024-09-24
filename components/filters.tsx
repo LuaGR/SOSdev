@@ -16,6 +16,19 @@ export default function Filters() {
     router.replace(`?${params.toString()}`)
   }
 
+  const categories = [
+    'All',
+    'SVG',
+    'Authentication',
+    'Learn',
+    'Youtube',
+    'Animation',
+    'API',
+    'Design System',
+    'AI',
+    'Database'
+  ]
+
   return (
     <div className='flex justify-center'>
       <Tabs
@@ -24,47 +37,12 @@ export default function Filters() {
         onSelectionChange={handleTabChange}
         selectedKey={category}
         className='w-96 sm:w-4/6 md:w-5/6'>
-        <Tab
-          key='all'
-          title='All'
-        />
-        <Tab
-          key='SVG'
-          title='SVG'
-        />
-        <Tab
-          key='Authentication'
-          title='Authentication'
-        />
-
-        <Tab
-          key='Learn'
-          title='Learn'
-        />
-        <Tab
-          key='Youtube'
-          title='Youtube'
-        />
-        <Tab
-          key='Animation'
-          title='Animation'
-        />
-        <Tab
-          key='API'
-          title='API'
-        />
-        <Tab
-          key='Design System'
-          title='Design System'
-        />
-        <Tab
-          key='AI'
-          title='AI'
-        />
-        <Tab
-          key='Database'
-          title='Database'
-        />
+        {categories.map((item) => (
+          <Tab
+            key={item.toLowerCase()}
+            title={item}
+          />
+        ))}
       </Tabs>
     </div>
   )
