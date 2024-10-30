@@ -4,7 +4,6 @@ import type { Item } from '@/types/item'
 
 export const revalidate = 1
 
-// GET: Obtener todos los registros de la tabla resources
 export async function GET() {
   try {
     const { rows } = await sql<Item[]>`SELECT * FROM resources`
