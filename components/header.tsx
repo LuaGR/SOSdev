@@ -3,7 +3,7 @@ import { button as buttonStyles } from '@nextui-org/theme'
 
 import { siteConfig } from '@/config/site'
 import { title, subtitle } from '@/components/primitives'
-import { GithubIcon } from '@/components/navbar/icons'
+import { GithubIcon } from './layout/navbar/icons'
 
 export default function Header() {
   return (

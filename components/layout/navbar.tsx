@@ -7,8 +7,8 @@ import {
 
 import NextLink from 'next/link'
 
-import { ThemeSwitch } from '@/components/navbar/theme-switch'
-import { Logo } from '@/components/navbar/icons'
+import { ThemeSwitch } from './navbar/theme-switch'
+import { Logo } from './navbar/icons'
 import SearchInput from './navbar/search-input'
 
 export const Navbar = () => {

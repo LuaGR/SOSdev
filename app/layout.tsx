@@ -4,8 +4,8 @@ import clsx from 'clsx'
 import { Providers } from './providers'
 import { siteConfig } from '@/config/site'
 import { fontSans } from '@/config/fonts'
-import { Navbar } from '@/components/navbar'
-import Footer from '@/components/footer'
+import { Navbar } from '@/components/layout/navbar'
+import Footer from '@/components/layout/footer'
 import { Suspense } from 'react'
 
 export const metadata: Metadata = {
